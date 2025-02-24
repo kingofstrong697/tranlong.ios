@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://24hstore.vn/upload_images/images/hinh-nen-anime/hinh-nen-anime-ngau-nam-5.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .status {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .status span {
+            margin-left: 5px;
+            font-weight: bold;
+        }
+        .status .online {
+            width: 10px;
+            height: 10px;
+            background: green;
+            border-radius: 50%;
+        }
+        .time {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .option input[type="checkbox"] {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #000;
+            border-radius: 4px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .option input[type="checkbox"]:checked {
+            background-color: green;
+            border-color: green;
+        }
+        .coder {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('vi-VN', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="status">
+            <div class="online"></div>
+            <span>Trạng thái: Online</span>
+        </div>
+        <div class="time">Thời gian: <span id="clock"></span></div>
+        <div class="options">
+            <label class="option"><input type="checkbox" name="tool"> aimlock speed</label>
+            <label class="option"><input type="checkbox" name="tool"> Giảm Rung Tâm</label>
+            <label class="option"><input type="checkbox" name="tool"> Fix Lag Máy</label>
+            <label class="option"><input type="checkbox" name="tool"> Buff Fps Game</label>
+            <label class="option"><input type="checkbox" name="tool"> Aimlock Gamer 85%</label>
+            <label class="option"><input type="checkbox" name="tool"> Nhẹ Tâm V1</label>
+            <label class="option"><input type="checkbox" name="tool"> Hesot V2 Antiband</label>
+            <label class="option"><input type="checkbox" name="tool"> Aim Head Max</label>
+            <label class="option"><input type="checkbox" name="tool"> Dpi supper</label>
+            <label class="option"><input type="checkbox" name="tool"> fix lỗi</label>
+            <label class="option"><input type="checkbox" name="tool"> aim ảo</label>
+            <label class="option"><input type="checkbox" name="tool"> ghìm tâm</label>
+        </div>
+        <div class="coder">Coder: BY @TRLong</div>
+    </div>
+</body>
+</html>
